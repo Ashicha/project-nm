@@ -692,6 +692,7 @@ body{
 /*=============================
 	Start Schedule CSS
 ===============================*/
+
 .schedule {
 	background: #fff;
 	margin: 0;
@@ -1019,6 +1020,25 @@ body{
 	background-repeat:no-repeat;
 	position:relative;
 }
+.why-choose .crtt{
+	height:100%;
+	width:100%;
+	background-image:url('img/chant.jpg');
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	position:relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+/* Ensure the link is visible and clickable */
+.video-image .video {
+    position: relative; /* Ensure the link has a position */
+    z-index: 1; /* Ensure the link is above other elements */
+}
+
 .why-choose .choose-right .video {
 	color: #fff;
 	height: 70px;
@@ -1073,7 +1093,7 @@ body{
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('img/call-bg.jpg');
+	background-image:url('img/musics.jpg');
 	background-size:cover;
 	background-position:center;
 	position:relative;
@@ -1238,6 +1258,14 @@ body{
 .pf-details .image-slider img{
 	height:100%;
 	width:100%;
+}
+.game-container{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+	
 }
 .pf-details .date{
 	background: #1a76d1;
@@ -4180,6 +4208,15 @@ body{
     margin-right: 0.5rem; /* Adjust spacing if needed */
 
 }
+.middle-section {
+	
+	flex: 1;
+	margin-left: 500px;
+	font-size: 100px;
+	max-width: 1000px;
+	display: flex;
+	align-items: center;
+  }
 
 /*=========================
 	End Footer CSS
