@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Game */
+        header {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px; /* Adjust width as needed */
+            height: 100%;
+            background-color: #444; /* Sidebar background color */
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar.left {
+            left: 0;
+        }
+
+        .sidebar.right {
+            right: 0;
+        }
+
+        .game-container {
+            width: calc(75%); /* Adjust width based on sidebar width */
+            height: 70%;
+            margin: auto;
+            position: relative;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .numbers {
+            position: absolute;
+            color: #fff;
+            font-size: 5vw;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .numbers.score {
+            top: 10px;
+            left: 10px;
+        }
+
+        .numbers.timer {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .ball {
+            width: 10vw;
+            height: 10vw;
+            border-radius: 100%;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            border: 5px solid #000;
+            transition: .2s ease;
+            cursor: pointer;
+        }
+
+        .ball.end {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="dropdown__link"><h1>Home</h1></a>
+    </header>
+
+    <div class="container">
+        <div class="sidebar left">
+            <!-- Left sidebar content -->
+        </div>
+
+        <div class="game-container">
+            <div class="numbers score">0</div>
+            <div class="ball start"></div>
+            <div class="numbers timer">60</div>
+        </div>
+
+        <div class="sidebar right">
+            <!-- Right sidebar content -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/game.js"></script> <!-- Import your game.js file -->
+</body>
+</html>
